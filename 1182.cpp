@@ -1,5 +1,5 @@
 //https://www.acmicpc.net/problem/1182
-
+// N = 5, S = 0, arr = [-7, -3, -2, 5, 8]
 #include <iostream>
 using namespace std;
 
