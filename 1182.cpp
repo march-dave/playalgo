@@ -28,6 +28,13 @@ int main() {
     }
 
     DFS(0, 0);
-    cout << ans - (S == 0);
+    // cout << "kk" << (S == 0);
+    // cout << ans - (S == 0);
+
+    if (S == 0) {
+        cout << ans - 1;
+    } else {
+        cout << ans;
+    }
     return 0;
 }
