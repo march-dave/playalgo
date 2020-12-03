@@ -18,7 +18,7 @@ void DFS(int level, int sum) {
     } else {
         for(int i=sum; i<K; i++) {
             combi[level] = lotto[i];
-            DFS(level+1, lotto[level]);
+            DFS(level+1, i+1);
         }
     }
 }
