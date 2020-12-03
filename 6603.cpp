@@ -6,7 +6,7 @@
 using namespace std;
 
 int K;
-int S[13], arr[20];
+int S[13], lotto[20];
 int combi[200];
 // int ans;
 
@@ -17,8 +17,8 @@ void DFS(int level, int sum) {
         // }
     } else {
         for(int i=sum; i<K; i++) {
-            combi[level] = arr[i];
-            DFS(level+1, sum+arr[level]);
+            combi[level] = lotto[i];
+            DFS(level+1, lotto[level]);
         }
     }
 }
