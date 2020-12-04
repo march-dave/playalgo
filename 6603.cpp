@@ -6,19 +6,18 @@
 using namespace std;
 
 int K;
-int S[13], lotto[20];
+int S[20];
 int combi[200];
-// int ans;
 
 void DFS(int level, int sum) {
     if(level == 6) {
-        for(int j=0; j<6; j++) {
-            cout << combi[j];
+        for(int i=0; i<6; i++) {
+            cout << combi[i] << ' ';
         }
         cout << "\n";
     } else {
         for(int i=sum; i<K; i++) {
-            combi[level] = lotto[i];
+            combi[level] = S[i];
             DFS(level+1, i+1);
         }
     }
@@ -31,10 +30,6 @@ int main() {
             cin >> S[i];
         }
         DFS(0, 0);
-
-        // for(int j=0; j<6; j++) {
-        //     cout << combi[j];
-        // }
         cout << "\n";
     }
 
