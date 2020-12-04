@@ -12,9 +12,10 @@ int combi[200];
 
 void DFS(int level, int sum) {
     if(level == 6) {
-        // if (sum == S) {
-        //     ans = ans + 1;
-        // }
+        for(int j=0; j<6; j++) {
+            cout << combi[j];
+        }
+        cout << "\n";
     } else {
         for(int i=sum; i<K; i++) {
             combi[level] = lotto[i];
@@ -29,12 +30,13 @@ int main() {
         for (int i=0; i<K; i++) {
             cin >> S[i];
         }
+        DFS(0, 0);
+
+        // for(int j=0; j<6; j++) {
+        //     cout << combi[j];
+        // }
+        cout << "\n";
     }
 
-    DFS(0, 0);
-
-    for(int j=0; j<6; j++) {
-        cout << combi[j];
-    }
     return 0;
 }
