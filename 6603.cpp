@@ -7,24 +7,24 @@ using namespace std;
 
 int K;
 int S[20];
-int combi[200];
+int lotto[200];
 
-void DFS(int level, int sum) {
+void DFS(int level, int num) {
     if(level == 6) {
         for(int i=0; i<6; i++) {
-            cout << combi[i] << ' ';
+            cout << lotto[i] << ' ';
         }
         cout << "\n";
     } else {
-        for(int i=sum; i<K; i++) {
-            combi[level] = S[i];
+        for(int i=num; i<K; i++) {
+            lotto[level] = S[i];
             DFS(level+1, i+1);
         }
     }
 }
 
 int main() {
-
+    
     while(cin >> K && K) {
         for (int i=0; i<K; i++) {
             cin >> S[i];
