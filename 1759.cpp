@@ -47,7 +47,7 @@ int main() {
 
     // 정렬 한번 해주고!! 조건에서 작은 번호 부터 방문
     // for (int i = 1; i <= v; i++)
-    //     sort(arr[i].begin(), arr[i].end());
+        sort(arr, arr+C);
 
     DFS(0, 0);
 
