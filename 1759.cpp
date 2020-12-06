@@ -12,6 +12,7 @@
 // K = 7, S = [1 2 3 4 5 6 7]
 
 #include <iostream>
+#include <algorithm> // sort
 using namespace std;
 
 int L, C;
@@ -31,6 +32,10 @@ void DFS(int level, int num) {
     }
 }
 
+// sort(vec[i].begin(), vec[i].end());
+// DFS 탐색 후 chk 다시 reset
+// memset(chk, false, sizeof(chk));
+
 int main() {
 
     cin >> L;
@@ -39,6 +44,10 @@ int main() {
     for (int i=0; i<C; i++) {
         cin >> arr[i];
     }
+
+    // 정렬 한번 해주고!! 조건에서 작은 번호 부터 방문
+    // for (int i = 1; i <= v; i++)
+    //     sort(arr[i].begin(), arr[i].end());
 
     DFS(0, 0);
 
