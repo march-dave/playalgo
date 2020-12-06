@@ -14,7 +14,6 @@
 #include <iostream>
 using namespace std;
 
-
 int L, C;
 char arr[20];
 char passW[4];
