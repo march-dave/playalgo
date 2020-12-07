@@ -15,7 +15,6 @@ using namespace std;
 int L, C; // L = 4 , C = 6
 char arr[20];
 char passW[4];
-// int vowel, consonant;
 
 void DFS(int level, int num, int vowel, int consonant) {
     if (level == L) {
@@ -25,7 +24,7 @@ void DFS(int level, int num, int vowel, int consonant) {
             }
             // cout << " vowel: " << vowel;
             // cout << " consonant: " << consonant;
-            // cout << "\n";
+            cout << "\n";
         }
     } else {
         for(int i=num; i<C; i++) {
