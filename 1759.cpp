@@ -21,11 +21,11 @@ void DFS(int level, int num) {
     if (level == L) {
         if ( vowel >= 1 && consonant >= 2) {
             for(int i=0; i<4; i++) {
-                cout << passW[i];
+                cout << passW[i] << ' ';
             }
         }
     } else {
-        for(int i=num; i<L; i++) {
+        for(int i=num; i<C; i++) {
             if (arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u') {
                 passW[level] = arr[i];
                 vowel = vowel + 1;
