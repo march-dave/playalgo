@@ -4,7 +4,7 @@
 // 2
 // 32
 // 32123
-// 1232123 finally we are excepted this number.
+// 1213121 finally we are excepted this number.
 
 #include <iostream>
 
