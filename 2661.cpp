@@ -14,7 +14,7 @@ void DFS(int level, int num) {
 
     } else {
 
-        for(int i=N; i<N; i++) {
+        for(int i=num; i<N; i++) {
             DFS(level+1, i+1);
         }
     }
