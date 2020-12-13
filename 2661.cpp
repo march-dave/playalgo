@@ -19,7 +19,6 @@ void DFS(int level, int num) {
             DFS(level+1, i+1);
         }
     }
-
 }
 
 int main() {
