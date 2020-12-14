@@ -10,20 +10,20 @@ int N; // 1<= N <= 80 scope
 
 // 1213121 finally we are expected this number.
 
-void DFS(int level, int num) {
+void DFS(int level) {
     if(level == N) {
 
     } else {
 
-        for(int i=num; i<N; i++) {
-            DFS(level+1, i+1);
+        for(int i=1; i<3; i++) {
+            DFS(level+1);
         }
     }
 }
 
 int main() {
     cin >> N;
-    DFS(0, 0);
+    DFS(0);
 
     return 0;
 }
