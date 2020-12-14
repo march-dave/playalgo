@@ -6,6 +6,7 @@
 using namespace std;
 
 int N; // 1<= N <= 80 scope
+int arr[80];
 // N = 7
 
 // 1213121 finally we are expected this number.
@@ -16,6 +17,9 @@ void DFS(int level) {
     } else {
 
         for(int i=1; i<3; i++) {
+
+            if(arr[level-1] == i) continue;            
+            arr[level] = i;
             DFS(level+1);
         }
     }
