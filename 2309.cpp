@@ -5,9 +5,15 @@
 #include <iostream>
 using namespace std;
 int arr[9];
+int sum;
 
 void DFS(int level, int num) {
     if(level == 9) {
+        if(sum == 100) {
+            for(int i=0; i<7; i++) {
+                cout << arr[i];
+            }
+        }
 
     } else {
         DFS(level+1, num);
