@@ -4,20 +4,22 @@
 
 #include <iostream>
 using namespace std;
-int arr[9];
-int sum;
+int arr[9], r_arr[9];
+int cnt, sum;
 
 void DFS(int level, int num) {
     if(level == 9) {
-        if(sum == 100) {
-            for(int i=0; i<7; i++) {
-                cout << arr[i];
-            }
+        for(int i=0; i<7; i++) {
+            cout << arr[i];
         }
-
     } else {
-        DFS(level+1, num);
-        DFS(level+1, num+1);
+        for(int i=0; i<9; i++) {
+            r_arr[level] = arr[i];
+            DFS(level+1, num);
+            r_arr[level] = arr[i];
+            DFS(level+1, num+1);
+            cnt++;
+        }
     }
 }
 
