@@ -19,7 +19,7 @@ void DFS(int level, int num) {
             DFS(level+1, num);
             r_arr[level] = arr[i];
             DFS(level+1, num+1);
-            cnt++;
+            // cnt++;
         }
     }
 }
