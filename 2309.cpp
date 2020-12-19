@@ -14,13 +14,13 @@ void DFS(int level, int num) {
             cout << arr[i];
         }
     } else {
-        for(int i=0; i<9; i++) {
-            r_arr[level] = arr[i];
+        // for(int i=0; i<9; i++) {
+            r_arr[level] = arr[num];
             DFS(level+1, num);
-            r_arr[level] = arr[i];
+            r_arr[level] = arr[num];
             DFS(level+1, num+1);
             // cnt++;
-        }
+        // }
     }
 }
 
@@ -30,7 +30,7 @@ int main() {
         cin >> arr[i];
     }
 
-    DFS(0, 0);
+    DFS(0, -1);
 
     return 0;
 }
