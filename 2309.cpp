@@ -25,7 +25,13 @@ void DFS(int level) {
         }
 
         for(int m=0; m<7; m++) {
-            cout << r_arr[m] << " ";
+           sum = sum + r_arr[m];
+        }
+
+        if (sum  == 100) {
+            for(int m=0; m<7; m++) {
+                cout << r_arr[m] << ' ';
+            }
         }
 
         cnt = 0;
