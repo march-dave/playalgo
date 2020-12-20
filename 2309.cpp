@@ -18,9 +18,17 @@ void DFS(int level) {
 
         if (cnt == 7) {
             for(int k=0; k<9; k++) {
-
+                if (chk[k] == 1) {
+                    r_arr[k] = arr[k];
+                }
             }
         }
+
+        for(int m=0; m<7; m++) {
+            cout << r_arr[m] << " ";
+        }
+
+        cnt = 0;
     } else {
             chk[level] = 0;
             DFS(level+1);
