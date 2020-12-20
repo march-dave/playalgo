@@ -12,13 +12,13 @@ void DFS(int level) {
     if(level == 9) {
         for(int j=0; j<9; j++) {
             if (chk[j] == 1) {
-                sum = sum + chk[j];
+                cnt = cnt + chk[j];
             }
         }
 
-        if (sum == 100) {
+        if (cnt == 7) {
             for(int k=0; k<9; k++) {
-                
+
             }
         }
     } else {
