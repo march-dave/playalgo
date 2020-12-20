@@ -4,6 +4,7 @@
 // 20 7 23 19 10 15 25 8 13
 
 #include <iostream>
+#include<algorithm>
 using namespace std;
 int arr[9], r_arr[9], chk[9];
 int cnt, sum;
@@ -49,6 +50,8 @@ int main() {
     for(int i=0; i<9; i++) {
         cin >> arr[i];
     }
+
+    sort(arr, arr+9); //오름차순으로 정렬
 
     DFS(1);
 
