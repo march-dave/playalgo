@@ -5,21 +5,27 @@
 
 #include <iostream>
 using namespace std;
-int arr[9], r_arr[9];
+int arr[9], r_arr[9], chk[9];
 int cnt, sum;
 
-void DFS(int level, int num) {
+void DFS(int level) {
     if(level == 9) {
-        for(int i=0; i<7; i++) {
-            cout << arr[i];
+        for(int j=0; j<9; j++) {
+            if (chk[j] == 1) {
+                sum = sum + chk[j];
+            }
+        }
+
+        if (sum == 100) {
+            for(int k=0; k<9; k++) {
+                
+            }
         }
     } else {
-        // for(int i=0; i<9; i++) {
-            r_arr[level] = arr[num];
-            DFS(level+1, num);
-            r_arr[level] = arr[num];
-            DFS(level+1, num+1);
-            // cnt++;
+            chk[level] = 0;
+            DFS(level+1);
+            chk[level] = 1;
+            DFS(level+1);
         // }
     }
 }
@@ -30,7 +36,7 @@ int main() {
         cin >> arr[i];
     }
 
-    DFS(0, -1);
+    DFS(1);
 
     return 0;
 }
