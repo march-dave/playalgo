@@ -68,12 +68,16 @@ int sum;
 void Sum() {
 
     for(int i=0; i<9; i++) {
-        sum = sum + arr[i];
-    }
+        for(int j=i+1; j<9; j++) {
+            if (sum - arr[i] - arr[j] == 100) {
 
-    for(int i=0; i<9; i++) {
-        for(int j=i; j<9; j++) {
-            if (sum - arr[i] - arr[j] == 100) 
+                for(int k=0; k<9; k++) {
+                    if (i == k || j == k) continue;
+                    // cout << "======\n";
+                    cout << arr[k] << "\n";
+                }
+                return;
+            }
                 
         }
     }
@@ -82,6 +86,10 @@ void Sum() {
 int main() {
     for(int i=0; i<9; i++) {
         cin >> arr[i];
+    }
+
+    for(int j=0; j<9; j++) {
+        sum = sum + arr[j];
     }
 
     sort(arr, arr+9); //오름차순으로 정렬
