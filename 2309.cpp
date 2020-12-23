@@ -73,7 +73,6 @@ void Sum() {
 
                 for(int k=0; k<9; k++) {
                     if (i == k || j == k) continue;
-                    // cout << "======\n";
                     cout << arr[k] << "\n";
                 }
                 return;
