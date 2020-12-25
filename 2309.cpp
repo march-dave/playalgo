@@ -90,7 +90,7 @@ int main() {
         sum = sum + arr[j];
     }
 
-    sort(arr, arr+9); //오름차순으로 정렬
+    sort(arr, arr+9); //오름 차순으로 정렬
     Sum();
     return 0;
 }
